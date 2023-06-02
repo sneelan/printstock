@@ -13,7 +13,8 @@ import { LoginTestComponent } from './admin/pages/login-test/login-test.componen
 
 const routes: Routes = [
 
-  { path: '', redirectTo: 'login', pathMatch: 'full' },  
+
+  { path: '', component: LoginTestComponent },
   { path: 'login', component: LoginTestComponent },
   { path: 'admin/dashboard', component: DashboardComponent },
   { path: 'admin/orders', component: OrderlistComponent },
