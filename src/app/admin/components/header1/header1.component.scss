@@ -1,0 +1,48 @@
+.notification-bell i{
+  font-size: 30px;
+  color: #C2CFE0;
+}
+
+.avatar-dropdown-image img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+ 
+.name_and_mail h6{
+  
+  font-size: 0.85em;
+  color: white;
+  
+}
+.name_and_mail h6 small{
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #464646;
+  line-height: 14px;
+}
+ .dropdown-menu{
+  right: 0;
+  left: auto;
+  top: 40px;
+  border-radius: 0 0 0.25em 0.25em;
+  border-top: 0;
+  z-index: 20000;
+}
+.notification-bell span.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color:  red;
+  top: 0;
+  right: 0;
+}
+a.dropdown-item{   
+  padding:0.75em;transition:0ms;
+  &:hover{
+    background-color:#FF7145 !important;
+    color:white;transition:0ms;
+  }
+}

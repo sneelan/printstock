@@ -1,0 +1,87 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Photo</th>
+      <th  (click)="sortTable('name')">Name 
+      <i class="bi bi-sort fw-bold fs-5" [ngClass]="{
+        'bi bi-sort-up-alt': sortedColumn === 'name' && sortDirection === 'asc',
+        'bi bi-sort-down': sortedColumn === 'name' && sortDirection === 'desc'
+      }"></i> <b class="bg-danger text-white p-1 rounded">sort</b>
+      </th>
+      <th  (click)="sortTable('email')">Email 
+        <i class="bi bi-sort fs-5" [ngClass]="{
+          'bi bi-sort-up-alt': sortedColumn === 'email' && sortDirection === 'asc',
+          'bi bi-sort-down': sortedColumn === 'email' && sortDirection === 'desc'
+        }"></i> <b class="bg-danger text-white p-1 rounded">sort</b>
+      </th>
+      <th>Phone</th>
+      <th>Date</th>
+      <th  (click)="sortTable('orders')">Orders 
+        <i class="bi bi-sort fs-5" [ngClass]="{
+          'bi bi-sort-up-alt': sortedColumn === 'orders' && sortDirection === 'asc',
+          'bi bi-sort-down': sortedColumn === 'orders' && sortDirection === 'desc'
+        }"></i> <b class="bg-danger text-white p-1 rounded">sort</b>
+      </th>
+      <th  (click)="sortTable('value')">Value <b> (sort)</b>
+        <i class="bi bi-sort fs-5" [ngClass]="{
+          'bi bi-sort-up-alt': sortedColumn === 'value' && sortDirection === 'asc',
+          'bi bi-sort-down': sortedColumn === 'value' && sortDirection === 'desc'
+        }"></i>
+
+      </th>
+      <th>Sponsor</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let user of users, let i=index">
+    <ng-container *ngIf="selectedSponsor=='' || selectedSponsor==user.sponsor">
+    <tr *ngIf="searchText=='' || user.name.toLowerCase().includes(searchText)">
+      <td>{{i+1}}</td>
+      <td><img class="opacity-50" src="../../../../assets/img/ui/{{user.photo}}" height="90" width="90"></td>
+      <td><a class="anchor-primary" ><b>{{user.name}}</b></a></td>
+      <td>{{user.email}}</td>
+      <td><b>7878 985 211</b></td>
+      <td><small>24 Feb 2023</small></td>
+      <td><b>{{user.orders}}</b></td>
+      <td class="text-black"><b>{{user.value}} £</b></td>
+      <td class="text-primary fs-5">
+        <div class="lh-1">
+          <i *ngIf="user.sponsor=='facebook'" class="fs-3 bi bi-facebook text-info"></i>          
+          <i *ngIf="user.sponsor=='google'" class="fs-3 bi bi-google text-danger"></i>          
+          <i *ngIf="user.sponsor=='linkedin'" class="fs-3 bi bi-linkedin"></i>          
+        </div>
+      </td>
+      <td>
+        <div class="d-flex align-items-center justify-content-evenly">
+          <a (click)="openModal(modalContent); showform='1'" class="icon-btn" ><img src="../../../../assets/img/ui/ico-edit.svg"></a>
+          <a (click)="openModal(modalContent); showform=''" class="icon-btn ms-3 icon-del" ><img src="../../../../assets/img/ui/ico-del.svg"></a>
+        </div>
+      </td>
+    </tr>
+  </ng-container>
+  </ng-container>
+  </tbody>
+</table>
+
+
+<ng-template #modalContent let-modal>
+	<div class="modal-header">
+    <h4 class="modal-title h2 fw-bold">
+      <span *ngIf="showform">Edit User</span>
+      <span *ngIf="!showform">Delete Data</span>
+    </h4>
+    <a class="close" aria-label="Close" (click)="closeModal()">
+      <i class="bi bi-x fs-1"></i>
+    </a>
+  </div>
+  <div class="modal-body">
+    <app-userform *ngIf="showform"></app-userform>
+    <div class="bg-danger text-white p-3 fs-3" *ngIf="showform">Not Configured</div>
+    <div class="bg-danger text-white p-3 fs-3" *ngIf="!showform">Pending Splice</div>
+  </div>
+  <div class="modal-footer d-none">
+    <a class="btn btn-secondary" (click)="closeModal()">Close</a>
+  </div>
+</ng-template>

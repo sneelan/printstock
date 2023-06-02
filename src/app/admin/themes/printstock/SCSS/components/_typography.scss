@@ -1,0 +1,50 @@
+
+body {
+    font-family: $font-family-base !important;
+    font-size: $para !important;
+    color: $gray-dark !important;
+}
+h1, h2 {
+    color: $gray-dark !important;
+}
+h1 {
+    font-size: $heading !important;
+    line-height: 48px !important;
+    //font-weight: $font-weight-bold !important;
+    @include media-breakpoint-down(lg) {
+        font-size: $sub-heading-2 !important;
+        line-height: 32px !important;
+    }
+}
+h2 {
+    font-size: $sub-heading !important;
+    line-height: 40px !important;
+    font-weight: $font-weight-bold !important;
+    @include media-breakpoint-down(lg) {
+        font-size: $sub-heading-2 !important;
+        line-height: 32px !important;
+    }
+}
+h3 {
+    font-size: $sub-heading-2 !important;
+    line-height: 40px !important;
+}
+h4 {
+    font-size: $sub-heading-3 !important;
+    line-height: 24px !important; 
+}
+p{
+  line-height: 24px;
+}
+// @font-face {
+//     font-family: 'Bebas';
+//     src: url('/assets/fonts/Bebas-Regular.eot');
+//     src: url('/assets/fonts/Bebas-Regular.eot?#iefix') format('embedded-opentype'),
+//         url('/assets/fonts/Bebas-Regular.woff2') format('woff2'),
+//         url('/assets/fonts/Bebas-Regular.woff') format('woff'),
+//         url('/assets/fonts/Bebas-Regular.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+//   }
+

@@ -1,0 +1,14 @@
+#sidebar{ 
+    .nav-item{ 
+        margin:0em 0;width:90%;
+    }
+    .nav-link{
+        color: rgb(175 180 197);font-weight: 600;padding:0.9em; 
+        img{@include opacity(.7); color:white;}
+        &:hover{color:white;img{@include opacity(1);}}
+    }
+    .active{
+        background-color:$theme-secondary!important;color:white!important;border-radius:0 2em 2em 0!important;
+        img{@include opacity(1);}
+    }
+}

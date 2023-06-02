@@ -1,0 +1,15 @@
+<app-login-test #applogin></app-login-test>
+<div class="bg-theme-primary-dark vh-100" *ngIf="applogin.LoginMessage=='success'">
+  <app-header1></app-header1>
+  <main>
+    <div class="m-0 row p-0">
+      <app-sidebar class="p-0 col-lg-2"></app-sidebar>
+      <div class="p-0 col-lg-10">
+        <div id="content" class="p-3 bg-theme-secondary-light rounded-start">
+          <router-outlet></router-outlet>
+        </div>        
+      </div>
+    </div>
+  </main>
+  <app-footer1></app-footer1>
+</div>

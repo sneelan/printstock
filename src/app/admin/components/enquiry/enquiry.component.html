@@ -1,0 +1,135 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr >
+      <th>Message</th>
+      <th>Phone No</th>
+      <th>Date</th>
+      <th>Call</th>
+      <th>Reply</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr (click)="openModal(modalContent)" >
+      <td><b>Lorem ipsum dolor sit amet</b></td>
+      <td><b>7848 1251 23</b></td>
+      <td><small>24 Feb 2023</small></td>
+      <td><span class="fs-4 opaicty-75 text-darkgreen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+            width="1em" height="1em" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z">
+            </path>
+          </svg></span></td>
+      <td><span class="fs-4 opaicty-75 text-darkgreen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+            width="1em" height="1em" fill="currentColor">
+            <path
+              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z">
+            </path>
+            <path
+              d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z">
+            </path>
+          </svg></span></td>
+    </tr>
+    <tr (click)="openModal(modalContent)" >
+      <td><b>Lorem ipsum dolor sit amet</b></td>
+      <td><b>7848 1251 23</b></td>
+      <td><small>24 Feb 2023</small></td>
+      <td><span class="fs-4 opaicty-75 text-darkgreen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+            width="1em" height="1em" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z">
+            </path>
+          </svg></span></td>
+      <td><span class="fs-4 opaicty-75 text-darkgreen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+            width="1em" height="1em" fill="currentColor">
+            <path
+              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z">
+            </path>
+            <path
+              d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z">
+            </path>
+          </svg></span></td>
+    </tr>
+    <tr (click)="openModal(modalContent)" >
+      <td><b>Lorem ipsum dolor sit amet</b></td>
+      <td><b>7848 1251 23</b></td>
+      <td><small>24 Feb 2023</small></td>
+      <td><span class="fs-4 opaicty-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em"
+            height="1em" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z">
+            </path>
+          </svg></span></td>
+      <td><span class="fs-4 opaicty-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em"
+            height="1em" fill="currentColor">
+            <path
+              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z">
+            </path>
+            <path
+              d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z">
+            </path>
+          </svg></span></td>
+    </tr>
+    <tr (click)="openModal(modalContent)" >
+      <td><b>Lorem ipsum dolor sit amet</b></td>
+      <td><b>7848 1251 23</b></td>
+      <td><small>24 Feb 2023</small></td>
+      <td><span class="fs-4 opaicty-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em"
+            height="1em" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z">
+            </path>
+          </svg></span></td>
+      <td><span class="fs-4 opaicty-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em"
+            height="1em" fill="currentColor">
+            <path
+              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z">
+            </path>
+            <path
+              d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z">
+            </path>
+          </svg></span></td>
+    </tr>
+    <tr (click)="openModal(modalContent)" >
+      <td><b>Lorem ipsum dolor sit amet</b></td>
+      <td><b>7848 1251 23</b></td>
+      <td><small>24 Feb 2023</small></td>
+      <td><span class="fs-4 opaicty-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em"
+            height="1em" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z">
+            </path>
+          </svg></span></td>
+      <td><span class="fs-4 opaicty-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em"
+            height="1em" fill="currentColor">
+            <path
+              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z">
+            </path>
+            <path
+              d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z">
+            </path>
+          </svg></span></td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #modalContent let-modal>
+	<div class="modal-header">
+    <h4 class="modal-title h2 fw-bold">Lorem ipsum dolor sit amet
+    </h4>
+    <a class="close" aria-label="Close" (click)="closeModal()">
+      <i class="bi bi-x fs-1"></i>
+    </a>
+  </div>
+  <div class="modal-body">
+    <p class="fs-5 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat iste commodi itaque labore soluta quos numquam ratione fugiat neque asperiores alias facere, expedita adipisci maiores vero quis illo dolor totam?
+      <br>
+    <b>Phone : 787 4598 33</b> <br>
+    <b>Date: 24 Feb 2023</b> <br>
+    <b>Email : mmm@yahoo.com</b> <br>
+  </p>
+  </div>
+  <div class="modal-footer d-none">
+    <a class="btn btn-secondary" (click)="closeModal()">Close</a>
+  </div>
+</ng-template>
+(click)="openModal(modalContent)"

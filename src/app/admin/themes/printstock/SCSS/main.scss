@@ -1,0 +1,17 @@
+//Theme Changing
+@import "./bootstrap-5.0.2/functions";
+@import "./bootstrap-5.0.2/bootstrap";
+@import "./variables";
+
+@import "./components/animations";
+@import "./components/grid";
+@import "./components/reset";
+@import "./components/typography";
+
+@import "./sections/common"; 
+@import "./sections/base"; 
+@import "./sections/element";
+@import "./sections/modal";     
+@import "./sections/navbar";
+@import "./sections/sections";
+@import "./sections/sidebar"; 

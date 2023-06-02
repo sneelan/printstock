@@ -1,0 +1,132 @@
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Product Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>SKU</th>
+      <th>Date</th>
+      <th>Orders</th>
+      <th>Value</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><img src="../../../../assets/img/ui/product1.png" height="90" width="90"> </td>
+      <td><a class="anchor-primary" ><b>Rounded Corners Stickers</b></a></td>
+      <td><a class="anchor-secondary" ><b>Decal Sticker</b></a></td>
+      <td><b>120 £</b></td>
+      <td><small>22</small></td>
+      <td class="text-primary fs-4">
+        <div class="lh-1 text-success">
+          <i class="bi bi-check-circle-fill"></i>
+        </div>
+      </td>
+      <td><small>24 Feb 2023</small></td>
+      <td>
+        <div class="d-flex align-items-center justify-content-evenly">
+          <a class="icon-btn" (click)="openModal(modalContent); showform='1'"><img src="../../../../assets/img/ui/ico-edit.svg"></a>
+          <a class="icon-btn ms-3 icon-del" (click)="openModal(modalContent); showform=''"><img src="../../../../assets/img/ui/ico-del.svg"></a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><img src="../../../../assets/img/ui/product2.png" height="90" width="90"> </td>
+      <td><a class="anchor-primary" ><b>Rounded Corners Stickers</b></a></td>
+      <td><a class="anchor-secondary" ><b>Decal Sticker</b></a></td>
+      <td><b>120 £</b></td>
+      <td><small>22</small></td>
+      <td class="text-primary fs-4">
+        <div class="lh-1 text-success"><i class="bi bi-check-circle-fill"></i></div>
+      </td>
+      <td><small>24 Feb 2023</small></td>
+      <td>
+        <div class="d-flex align-items-center justify-content-evenly">
+          <a class="icon-btn" (click)="openModal(modalContent); showform='1'"><img src="../../../../assets/img/ui/ico-edit.svg"></a>
+          <a class="icon-btn ms-3 icon-del" (click)="openModal(modalContent); showform=''"><img src="../../../../assets/img/ui/ico-del.svg"></a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><img src="../../../../assets/img/ui/product3.png" height="90" width="90"> </td>
+      <td><a class="anchor-primary" ><b>Rounded Corners Stickers</b></a></td>
+      <td><a class="anchor-secondary" ><b>Decal Sticker</b></a></td>
+      <td><b>120 £</b></td>
+      <td><small>22</small></td>
+      <td class="text-primary fs-4">
+        <div class="lh-1 text-success"><i class="bi bi-check-circle-fill"></i></div>
+      </td>
+      <td><small>24 Feb 2023</small></td>
+      <td>
+        <div class="d-flex align-items-center justify-content-evenly">
+          
+          <a class="icon-btn" (click)="openModal(modalContent); showform='1'"><img src="../../../../assets/img/ui/ico-edit.svg"></a>
+          <a class="icon-btn ms-3 icon-del" (click)="openModal(modalContent); showform=''"><img src="../../../../assets/img/ui/ico-del.svg"></a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><img src="../../../../assets/img/ui/product4.png" height="90" width="90"> </td>
+      <td><a class="anchor-primary" ><b>Rounded Corners Stickers</b></a></td>
+      <td><a class="anchor-secondary" ><b>Decal Sticker</b></a></td>
+      <td><b>120 £</b></td>
+      <td><small>22</small></td>
+      <td class="text-primary fs-4">
+        <div class="lh-1 text-success"><i class="bi bi-check-circle-fill"></i></div>
+      </td>
+      <td><small>24 Feb 2023</small></td>
+      <td>
+        <div class="d-flex align-items-center justify-content-evenly">
+          <a class="icon-btn" (click)="openModal(modalContent); showform='1'"><img src="../../../../assets/img/ui/ico-edit.svg"></a>
+          <a class="icon-btn ms-3 icon-del" (click)="openModal(modalContent); showform=''"><img src="../../../../assets/img/ui/ico-del.svg"></a>
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><img src="../../../../assets/img/ui/product5.png" height="90" width="90"> </td>
+      <td><a class="anchor-primary" ><b>Rounded Corners Stickers</b></a></td>
+      <td><a class="anchor-secondary" ><b>Decal Sticker</b></a></td>
+      <td><b>120 £</b></td>
+      <td><small>22</small></td>
+      <td class="text-primary fs-4">
+        <div class="lh-1 text-success"><i class="bi bi-check-circle-fill"></i></div>
+      </td>
+      <td><small>24 Feb 2023</small></td>
+      <td>
+        <div class="d-flex align-items-center justify-content-evenly">
+          <a class="icon-btn" (click)="openModal(modalContent); showform='1'"><img src="../../../../assets/img/ui/ico-edit.svg"></a>
+          <a class="icon-btn ms-3 icon-del" (click)="openModal(modalContent); showform=''"><img src="../../../../assets/img/ui/ico-del.svg"></a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<ng-template #modalContent let-modal>
+	<div class="modal-header">
+    <h4 class="modal-title h2 fw-bold">
+      <span *ngIf="showform">Edit Product</span>
+      <span *ngIf="!showform">Delete Product</span>
+    </h4>
+    <a class="close" aria-label="Close" (click)="closeModal()">
+      <i class="bi bi-x fs-1"></i>
+    </a>
+  </div>
+  <div class="modal-body">
+    <app-userform *ngIf="showform"></app-userform>
+    <div class="bg-danger text-white p-3 fs-3" *ngIf="showform">Not Configured</div>
+    <div class="bg-danger text-white p-3 fs-3" *ngIf="!showform">Pending Splice</div>
+  </div>
+  <div class="modal-footer d-none">
+    <a class="btn btn-secondary" (click)="closeModal()">Close</a>
+  </div>
+</ng-template>

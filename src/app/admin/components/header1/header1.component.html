@@ -1,0 +1,40 @@
+<header class="p-2">
+  <div class="d-flex align-items-center justify-content-between"><a [routerLink]="['/admin/dashboard']" class="logo" ><img
+        src="../../../../assets/img/logo/logo.svg" height="35" class="" alt="PrintStock"></a>
+    <div class="d-none d-md-block">
+      <div class="dropdown d-none"><button aria-haspopup="true" class="text-dark  dropdown-toggle" aria-expanded="false">Hi
+          Admin</button>
+        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><a tabindex="0" role="menuitem"
+            class="dropdown-item">Logout</a></div>
+      </div>   
+    </div>
+    <div>
+      
+      <div class="d-flex align-items-center gap-4">
+        <!-- notification-bell -->
+        <a class="notification-bell d-block position-relative opacity-50">
+          <i class="bi bi-bell"></i>
+          <span class="circle d-block position-absolute"></span>
+        </a>
+        <!-- account-dropdown -->                 
+          <div class=" dropdown account-dropdown d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+            <a (click)="clickdropdown()" role="button" id="dropdownMenuLink" class="text-decoration-none opacity-50">
+              <div class="d-flex align-items-center avatar-dropdown-image">
+                <img src="../../../../assets/img/avatars/1.png" class="me-3">
+                <div class="name_and_mail">
+                    <h6 class="mb-0"><span style="font-weight:800">S. Neelan</span><br><span>sneelan@gmail.com</span></h6> 
+                </div>
+            </div>
+            </a>
+            <div class="dropdown-menu p-2 {{showdropdown}}">             
+                <a class="dropdown-item" >Action</a>
+                <a class="dropdown-item" >Another action</a>
+                <a class="dropdown-item" >Something else here</a>               
+              </div>
+          </div>
+      </div>
+
+
+    </div>
+  </div>
+</header>

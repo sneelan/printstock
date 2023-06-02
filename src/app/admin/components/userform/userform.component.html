@@ -1,0 +1,60 @@
+<div class="bg-white p-2 lh-lg">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+    <div class="form-field">
+      <label for="name" >Name: </label>
+      <input type="text" formControlName="name" placeholder="Name" id="name" class="p-1 fs-6"> 
+       <span *ngIf="isFieldValid('name')" class="text-danger small fw-bold">* {{ getErrorMessage('name') }}</span>
+    </div>
+  
+    <div class="form-field">
+      <label for="name" >Email: </label>
+      <input type="email" formControlName="email" placeholder="Email" class="p-1 fs-6">
+       <span *ngIf="isFieldValid('email')" class="text-danger small fw-bold">* {{ getErrorMessage('email') }}
+      </span>
+    </div>
+
+    <div class="form-field">
+      <label for="dropdown">Types of employee</label>
+      <select formControlName="designation" id="dropdown">
+        <option value="" >Select an option</option>
+        <option value="designer" selected>Designer</option>
+        <option value="developer">Developer</option>
+        <option value="tester">Tester</option>
+        <option value="marketing">marketing</option>
+      </select>
+      <div *ngIf="isFieldValid('designation')" class="text-danger small">
+        {{ getErrorMessage('designation') }}
+      </div>
+    </div>
+
+
+    <div class="form-field">
+      <label>Gender</label>
+      <span>
+        <input type="radio" formControlName="gender" value="male" id="male">
+        <label for="male"> Male</label>
+      </span>
+      <span class="ms-2">
+        <input type="radio" formControlName="gender" value="female" id="female">
+        <label for="female"> Female</label>
+      </span>
+      <div *ngIf="isFieldValid('gender')" class="text-danger small">
+        {{ getErrorMessage('gender') }}
+      </div>
+    </div>
+
+    
+  
+    <div class="form-field">
+      <label for="checkbox">Verified?</label>
+      <input type="checkbox" formControlName="married" id="checkbox">
+      <div *ngIf="isFieldValid('checkbox')" class="text-danger small">
+        {{ getErrorMessage('married') }}
+      </div>
+    </div> 
+    <button type="submit" class="btn btn-secondary" [disabled]="form.invalid">Submit</button>
+  </form>
+  <div *ngIf="postData" class="small p-2">{{postData| json}}</div>
+  <div *ngIf="successMessage" class="bg-success text-white p-2 text-center mt-2">{{ successMessage }}</div>
+  <div *ngIf="formerrorMessage" class="bg-danger text-white p-2 text-center mt-2">{{ formerrorMessage }}</div>
+</div>

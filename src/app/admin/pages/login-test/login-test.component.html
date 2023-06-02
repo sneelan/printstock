@@ -1,0 +1,33 @@
+<div class="bg-theme-primary-dark vh-100" *ngIf="LoginMessage!='success'">
+  <div class="w-100 h-100 ">
+  
+<div style="height: 100vh;" class="d-flex align-items-center justify-content-center">
+<div>
+  <div class="text-center">
+    <img
+      src="../../../../assets/img/logo/logo.svg" height="55" class="" alt="PrintStock">
+      <br><br>
+  </div>
+
+<div class="login-container bg-white rounded pt-2" [hidden]="HideLogin">
+  <h2 class="text-center">Admin Login</h2> 
+  <hr class="m-0 mt-2">
+  <form (ngSubmit)="login()" #loginForm="ngForm" [ngClass]="ngFormClass" class="p-3">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3" >Username:</span>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required class="border border-1 fs-6 pt-1 ps-3 pb-2 align-middle">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon3">Password:</span>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required class="border border-1 fs-6 pt-1 ps-3 pb-2 align-middle">
+    </div>
+
+    <button type="submit" [disabled]="!loginForm.valid" class="w-100 btn btn-secondary">Login</button>
+    <span class="text-danger fw-bold mt-2 ps-3 d-inline-block" *ngIf="LoginMessage=='error'">Invalid!</span>
+  </form>  
+  <div class="m-2 bg-success text-white text-center p-3 fw-bold" *ngIf="LoginMessage=='success'">You are successfully logged in!</div>
+</div>
+</div>
+</div>
+</div>
+</div>

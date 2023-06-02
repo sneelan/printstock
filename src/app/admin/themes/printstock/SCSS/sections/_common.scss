@@ -1,0 +1,46 @@
+// Commoncode
+
+.bg-theme-primary-dark{background-color: $theme-primary-dark;}
+.bg-theme-secondary-light{background-color: $theme-secondary-light;}
+// .bg-transparent{background-color: transparent!important;}
+
+
+.box-bg-yellow{background-color: $box-bg-yellow!important;}
+.box-bg-green{background-color: $box-bg-green!important;}
+.box-bg-red{background-color: $box-bg-red!important;}
+
+
+.text-darkgreen{color:$dark-green;}
+.text-green{color:$green;}
+.text-black{color:black;}
+
+.anchor-primary{color:$theme-primary;&:hover{color:$theme-primary-dark;}}
+.anchor-primary-dark{color:$theme-primary-dark;&:hover{color:$theme-primary;}}
+.anchor-secondary{color:$theme-secondary;&:hover{color:$theme-secondary-dark;}}
+
+
+@mixin opacity($value: 0.5, $hover:0.5, $transition:0.1) {
+   filter: alpha(opacity=$value*100);
+   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$value*100});
+   opacity: $value;
+   
+   &:hover{
+    filter: alpha(opacity=$hover*100);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$hover*100});
+    opacity: $hover;
+    transition: $transition;
+   }
+}
+@mixin filter($filter-type,$filter-amount) { 
+    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+    -o-filter: $filter-type+unquote('(#{$filter-amount})');
+    filter: $filter-type+unquote('(#{$filter-amount})');
+  }
+
+
+
+.opaicty-75{@include opacity(0.75, 1);}
+.opaicty-50{@include opacity(0.5, 1);}
+.opaicty-25{ @include opacity(0.25,1);}

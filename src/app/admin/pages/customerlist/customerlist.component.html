@@ -1,0 +1,21 @@
+<div>
+<div class="row">
+      <div class='col mb-3 pe-sm-3'>
+        <app-sectionbox [title]="' '" >
+          <div class="d-flex align-items-center justify-content-evenly">
+            <img src="../../../../assets/img/ui/customer 1.png">
+            <img src="../../../../assets/img/ui/customer 2.png">
+            <img src="../../../../assets/img/ui/customers 3.png">
+          </div>
+        </app-sectionbox>
+      </div>
+</div>
+<div class="row">
+    <div class='col mb-3 pe-md-3'>
+      <app-sectionbox [title]="'Customers List'" [search]="1" [userfilter]="'1'"
+      [addbtn]="'Add User'" #sectionbox>
+        <app-customer [searchText]="sectionbox.searchText" [selectedSponsor]="sectionbox.selectedSponsor"></app-customer>
+      </app-sectionbox>      
+    </div>
+  </div>
+</div>

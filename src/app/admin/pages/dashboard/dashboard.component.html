@@ -1,0 +1,44 @@
+  <h1 class="lh-1 mb-3">Dashboard</h1>
+  <div>
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="mb-3 pe-sm-3 col-sm-4">
+            <app-sectioncolorbox [colorclass]="'box-bg-yellow'" [title]="'Total Sales'" [icon]="'tag-fill'">225,738 £</app-sectioncolorbox>
+          </div>
+          <div class="mb-3 ps-sm-0 pe-sm-3 col-sm-4">
+            <app-sectioncolorbox [colorclass]="'box-bg-green'" [title]="'Total Profit'" [icon]="'bar-chart-fill'">45,0258 £</app-sectioncolorbox>
+          </div>
+          <div class="mb-3 ps-sm-0 pe-sm-3 col-sm-4">
+            <app-sectioncolorbox [colorclass]="'box-bg-red'" [title]="'Total Orders'" [image]="'delivery'">313</app-sectioncolorbox>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-wrap row">
+      <div class="mb-3 pe-md-3 col-md-6 col-lg-8">
+        <div class="mb-3">
+          <app-sectionbox [title]="'Sales Chart'">
+            <img src="../../../../assets/img/ui/chart1.png" />
+          </app-sectionbox>
+        </div>
+        <div class="">
+          <app-sectionbox [title]="'Customer Enquires'" [selectlist]="'ddd'" >
+            <app-enquiry></app-enquiry>
+          </app-sectionbox>
+        </div>
+      </div>
+      <div class="pb-3 mb-3 mb-lg-0 ps-md-0 pe-md-3 ps-lg-0 pe-lg-3 col-md-6 col-lg-4">
+        <app-sectionbox [title]="'Popular Products'">
+          <img src="../../../../assets/img/ui/chart2.png" />
+        </app-sectionbox>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 pe-md-3 col">
+        <app-sectionbox [title]="'Recent Orders'" [selectlist]="'ddd'" >
+          <app-order></app-order>
+        </app-sectionbox>
+      </div>
+    </div>
+  </div>

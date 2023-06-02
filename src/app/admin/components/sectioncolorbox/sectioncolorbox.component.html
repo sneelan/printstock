@@ -1,0 +1,12 @@
+<div class="box cbox box-bg-yellow {{colorclass}}">
+  <div class="box-header m-0 p-0 row">
+    <div class="cbox-icon align-middle text-center col">
+      <i *ngIf="icon" class="display-4 bi bi-{{icon}}"></i>
+      <img *ngIf="image" src="../../../../assets/img/ui/delivery.svg" />
+     </div>
+    <div class="col">
+      <h3 class="fw-bold">{{title}}</h3>
+      <div class="cbox-body fw-bold"><ng-content></ng-content> </div>
+    </div>
+  </div>
+</div>

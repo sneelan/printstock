@@ -1,0 +1,59 @@
+<div class="box h-100" [ngClass]="{'d-flex align-items-center justify-content-center': !title}">
+  <div class="box-header" *ngIf="title">
+      <div><h3 class="box-title w-100 {{align}}">{{title}}</h3></div>
+      <div>
+        <ng-container *ngIf="productfilter">        
+          <span class="d-inline-block pe-3"><select class="d-inline-block"><option>Category</option><option value="1">Round Stickers</option><option value="1">Square Stickers</option><option value="1">Decal Stickers</option><option value="1">Transfer Stickers</option></select></span>
+        </ng-container> 
+         <ng-container *ngIf="published">        
+          <span class="d-inline-block pe-3"><select class="d-inline-block"><option>Published</option><option value="1">UnPublished</option></select></span>
+        </ng-container>       
+             
+        <ng-container *ngIf="search">
+            <span class='d-inline-block pe-3'><input class='search-small form-control' placeholder="Search" [(ngModel)]="searchText"/></span>            
+        </ng-container>   
+        <ng-container *ngIf="userfilter">    
+          <span class='d-inline-block pe-3'>
+            <select class="d-inline-block" [(ngModel)]="selectedSponsor">
+                    <option value="">All Sponsors</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="google">Google</option>
+                    <option value="linkedin">Linkedin</option>
+              </select>
+            </span>
+        </ng-container>      
+        <ng-container *ngIf="addbtn">
+          <span class='d-inline-block'><a (click)="openModal(modalContent)" class='rounded-pill btn btn-secondary btn-lg'>{{addbtn}}</a></span>
+        </ng-container>        
+        <select class="d-inline-block" *ngIf="selectlist">
+          <option selected>View All</option>
+          <option value="1">Pending</option>
+          <option value="2">Packing</option>
+          <option value="3">Printing</option>
+          <option value="3">Cancelled</option>
+        </select>
+      </div>        
+  </div>
+  <div class="box-body text-center "><ng-content></ng-content></div>
+</div>
+
+
+
+<ng-template #modalContent let-modal>
+	<div class="modal-header">
+    <h4 class="modal-title h2 fw-bold">{{addbtn}}</h4>
+    <a class="close" aria-label="Close" (click)="closeModal()">
+      <i class="bi bi-x fs-1"></i>
+    </a>
+  </div>
+  <div class="modal-body" *ngIf="!productform">
+    <app-userform ></app-userform>
+  </div>
+  <ng-container *ngIf="productform">
+    <div class="box box-dark"><form class=""><div class="mb-3"><input name="title" placeholder="Product Name" type="text" class="form-control fs-6"></div><div class="mb-3"><label for="category" class="text-start small form-label">Add Category</label><div class="d-flex align-items-center justify-content-between"><div><select class="d-inline-block"><option>Category</option><option value="1">Round Stickers</option><option value="2">Transfer Stickers</option><option value="3">Decal Stickers</option><option value="3">Rectangle Stickers</option></select></div><div><span class="d-inline-block"><button class="rounded-pill btn btn-secondary btn-lg">Add Category</button></span></div></div></div><div class="mb-3"><label for="description" class="text-start small form-label">Description</label><textarea id="description" name="description" placeholder="Product Name" class="form-control fs-6"></textarea></div><div class="mb-3"><label for="short" class="text-start small form-label">Description</label><textarea id="short" name="short" placeholder="Product Name" class="form-control fs-6"></textarea></div></form></div>
+    <div class="bg-danger text-white p-2 fs-6 text-center m-1">Pending</div>
+</ng-container>
+  <div class="modal-footer d-none">
+    <a class="btn btn-secondary" (click)="closeModal()">Close</a>
+  </div>
+</ng-template>

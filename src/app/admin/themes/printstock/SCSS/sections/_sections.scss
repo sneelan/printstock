@@ -1,0 +1,56 @@
+//front page dashboard
+.box{
+    background-color: white;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.25rem #1c1c1c26;
+    padding:1em;
+    .box-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom:1em;
+        .box-title{
+            line-height:1!important;
+            font-weight: bold;            
+        }
+    }
+    //.box-body{}
+}
+
+.cbox{      
+    .box-header{
+        .cbox-icon{  svg{font-size: 50px;}}
+        h3{font-size:$sub-heading!important;line-height: 1 !important;margin-bottom:1em;}
+        .cbox-body{font-size:$sub-heading-2!important;line-height: 1 !important;}
+    }
+}
+
+.icon-btn{
+    display:block;width:25px;height:25px; 
+    img{
+        color:$theme-primary-dark;
+        @include filter(grayscale, 100%);
+        &:hover{
+            @include filter(grayscale, 0%);
+        }
+    }
+}
+.icon-del img{width:20px;height:20px;margin-top:2.5px;}
+
+.search-small{color: $gray-500;
+    &:hover{color:black;}
+}
+
+//Add Products page
+.box-dark{background-color:#00000024;}
+
+
+.btn-secondary {
+    color: #1c1c1c;
+    background-color: #ff7145;
+    border-color: #ff7145; color:white;
+&:hover{background-color: #020101;border-color: #020101;}
+}
+.table tr{
+    &:hover td, &:hover th{background-color: #e0e0e0;}
+}

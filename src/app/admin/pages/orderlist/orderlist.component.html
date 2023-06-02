@@ -1,0 +1,23 @@
+<app-title [titlenew]="'Orders'"></app-title>
+<div>
+<div class="row d-flex m-0 p-0">
+      <div class="col-4 mb-3 p-0 pe-sm-3 flex-wrap">
+        <app-sectionbox class="text-center ">
+          <img src="../../../../assets/img/ui/orders2.png">
+        </app-sectionbox>        
+      </div>
+      <div class="col-8 mb-3 p-0 flex-wrap" >
+        <div class="d-flex h-100 w-100 ">
+          <app-sectionbox class="flex-wrap w-100">
+            <img src="../../../../assets/img/ui/product-chart2.png">
+          </app-sectionbox>
+        </div>
+      </div>
+    </div>
+<div class="row p-0 m-0">
+    <div class='col mb-3 p-0'>
+      <app-sectionbox [title]="'Recent Orders'">
+        <app-product></app-product>
+      </app-sectionbox>
+    </div>
+  </div>

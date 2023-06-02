@@ -1,0 +1,7 @@
+header{height: 50px; }
+footer{height: 40px;overflow:hidden;}
+
+//main #sidebar, main #content{min-height: calc( 100vh - 100px ); }
+main, footer{background-color: $theme-primary-dark;}
+footer a{@include opacity(0.5, 1);}
+footer img, .copytext{@include opacity(0.5);}

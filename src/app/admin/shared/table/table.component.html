@@ -1,0 +1,31 @@
+<table class="table table-hover table-striped table-border border border-2 border-secondary">
+  <thead *ngIf="TableData.length > 0">
+    <tr *ngIf="TableData.length > 0">
+      <ng-container *ngIf="ShowIndex"><th>Index</th></ng-container>
+      <th *ngFor="let key of getObjectKeys(TableData[0])">   
+        <ng-container *ngIf="TableHeader; else:thisempty">    
+            <ng-container *ngIf="TableHeader[0][key]; else:valueempty">{{TableHeader[0][key]}}</ng-container>
+            <ng-template #valueempty>{{key}}</ng-template>
+        </ng-container>
+        <ng-template #thisempty>{{key}}</ng-template>        
+      </th>  
+      <span class="d-none"  *ngFor="let key of getObjectKeys(TableData[0])">{{ key }}:{{ TableData[0][key] }}</span>  
+    </tr>
+  </thead>
+  <tbody  class="table-group-divider">
+  <ng-container *ngFor="let data of TableData, let i=index">
+    <tr>
+        <ng-container *ngIf="ShowIndex"><td>{{i+1}}</td></ng-container>
+        <ng-container *ngFor="let key of getObjectKeys(data)">
+            <td>{{ data[key] }}</td>
+        </ng-container>
+        <ng-container *ngIf="BtnData"><td>
+            <app-button [BtnData]="BtnData" [PassData]="data"></app-button></td>
+        </ng-container>
+        <span class="d-none" *ngFor="let prop of data | keyvalue">
+            <td>{{ prop.key }}: {{ prop.value }}</td>
+        </span>
+  </tr>
+  </ng-container>  
+</tbody>
+</table>
